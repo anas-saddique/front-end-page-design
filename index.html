@@ -8,50 +8,89 @@
   </head>
   <body class="font-sans text-[#4D4D4D]">
     <header class="border-t-4 border-b-2 bg-white">
-      <div
-        class="max-w-[1100px] mx-auto px-5 h-[65px] flex items-center justify-between"
-      >
-        <div class="flex items-center gap-2">
-          <div class="grid grid-cols-2 gap-[2px]">
-            <span class="w-[20px] h-[20px] bg-green-500"></span>
-            <span class="w-[20px] h-[20px] bg-green-500"></span>
-            <span class="w-[20px] h-[20px] bg-green-500"></span>
-            <span class="w-[20px] h-[20px] bg-green-500"></span>
-          </div>
-          <h1 class="font-bold text-[27px] text-[#263238]">Nexcent</h1>
-        </div>
-
-        <nav class="hidden md:flex item-center gap-8 text-[18px]">
-          <a href="#" class="hover:text-green-500">Home</a>
-          <a href="#" class="hover:text-green-500">Service</a>
-          <a href="#" class="hover:text-green-500">Features</a>
-          <a href="#" class="hover:text-green-500">Product</a>
-          <a href="#" class="hover:text-green-500">Testimonials</a>
-          <a href="#" class="hover:text-green-500">FAQ</a>
-        </nav>
-        <div class="flex items-center gap-5 text-[11px]">
-          <a
-            href="#"
-            class="text-green-600 hover:text-green-900 hidden md:flex"
-          >
-            Login
-          </a>
-
-          <a
-            href="#"
-            class="bg-green-500 text-white px-5 py-2 rounded hover:text-green-500 hover:bg-white border-2 border-green-500 hidden md:flex"
-          >
-            Sign up
-          </a>
-          <button
-            onclick="toggleMenu()"
-            class="md:hidden text-[#263238] text-[30px] focus:outline-none"
-          >
-            ☰
-          </button>
-        </div>
+  <div
+    class="max-w-[1100px] mx-auto px-5 h-[65px] flex items-center justify-between"
+  >
+    
+    <div class="flex items-center gap-2">
+      <div class="grid grid-cols-2 gap-[2px]">
+        <span class="w-[20px] h-[20px] bg-green-500"></span>
+        <span class="w-[20px] h-[20px] bg-green-500"></span>
+        <span class="w-[20px] h-[20px] bg-green-500"></span>
+        <span class="w-[20px] h-[20px] bg-green-500"></span>
       </div>
-    </header>
+
+      <h1 class="font-bold text-[27px] text-[#263238]">
+        Nexcent
+      </h1>
+    </div>
+
+   
+    <nav class="hidden md:flex items-center gap-8 text-[18px]">
+      <a href="#" class="hover:text-green-500">Home</a>
+      <a href="#" class="hover:text-green-500">Service</a>
+      <a href="#" class="hover:text-green-500">Features</a>
+      <a href="#" class="hover:text-green-500">Product</a>
+      <a href="#" class="hover:text-green-500">Testimonials</a>
+      <a href="#" class="hover:text-green-500">FAQ</a>
+    </nav>
+
+    
+    <div class="flex items-center gap-5 text-[11px]">
+
+    
+      <a
+        href="#"
+        class="text-green-600 hover:text-green-900 hidden md:flex"
+      >
+        Login
+      </a>
+
+   
+      <a
+        href="#"
+        class="bg-green-500 text-white px-5 py-2 rounded hover:text-green-500 hover:bg-white border-2 border-green-500 hidden md:flex"
+      >
+        Sign up
+      </a>
+
+     
+      <button
+        onclick="toggleMenu()"
+        class="md:hidden text-[#263238] text-[30px] focus:outline-none"
+      >
+        ☰
+      </button>
+
+    </div>
+  </div>
+
+
+<div
+  id="mobileMenu"
+  class="md:hidden w-full bg-white shadow-lg overflow-hidden max-h-0 opacity-0 transition-all duration-500 ease-in-out"
+>
+  <div class="flex flex-col items-center gap-5 py-6 text-[18px]">
+
+    <a href="#" class="hover:text-green-500">Home</a>
+    <a href="#" class="hover:text-green-500">Service</a>
+    <a href="#" class="hover:text-green-500">Features</a>
+    <a href="#" class="hover:text-green-500">Product</a>
+    <a href="#" class="hover:text-green-500">Testimonials</a>
+    <a href="#" class="hover:text-green-500">FAQ</a>
+
+    <a href="#" class="text-green-600">Login</a>
+
+    <a
+      href="#"
+      class="bg-green-500 text-white px-6 py-2 rounded border-2 border-green-500"
+    >
+      Sign up
+    </a>
+
+  </div>
+</div>
+</header>
 
     <section class="bg-[#f5f7fa]">
       <div
@@ -511,5 +550,18 @@
         </div>
       </div>
     </footer>
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById("mobileMenu");
+
+    if (menu.classList.contains("max-h-0")) {
+      menu.classList.remove("max-h-0", "opacity-0");
+      menu.classList.add("max-h-[500px]", "opacity-100");
+    } else {
+      menu.classList.remove("max-h-[500px]", "opacity-100");
+      menu.classList.add("max-h-0", "opacity-0");
+    }
+  }
+</script>
   </body>
 </html>
